@@ -2,7 +2,7 @@
   "name": "vscode-oxpecker",
   "displayName": "Oxpecker - Rhino Script Runner for VS Code (Python & C#)",
   "description": "Run Python and C# scripts inside Rhino 8/9 via MCP with Pylance IntelliSense & auto-completion support.",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "publisher": "albertkliu",
   "icon": "media/icon.png",
   "repository": {
