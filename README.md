@@ -9,7 +9,7 @@
   <strong>基于 Model Context Protocol (MCP) 的新一代 VS Code ⇄ Rhino 8/9 实时交互与脚本运行环境</strong>
 </p>
 
----
+
 
 ## ⚡ 核心原理
 
@@ -19,7 +19,7 @@
 1. 自动将当前工作目录（CWD）切换至脚本所在目录，防止写入系统保护目录导致无权限报错。
 2. 自动绑定 `__file__` 变量，支持脚本同级相对路径读写与模块 `import`。
 
----
+
 
 ## 🚀 使用步骤
 
@@ -31,7 +31,6 @@
    - 打开 `.py` 或 `.cs` 脚本，点击编辑器右上角 **Oxpecker 运行图标**；
    - 或使用快捷键 `Ctrl + R` (macOS: `Cmd + R`) 运行全文或选区代码。
 
----
 
 ## 🛠️ 构建与打包
 
@@ -53,7 +52,7 @@ npm run vsix
 - `oxpecker.mcpPort`: Rhino MCP Server 监听端口（默认：`10501`）。
 - `oxpecker.selectedPythonEnv`: 当前选中的 Rhino Python 虚拟环境路径。
 
----
+
 
 ## 📄 开源许可 (License)
 
@@ -63,5 +62,5 @@ npm run vsix
 ## 🤖 AI 声明 (AI Disclosure)
 
 本项目（包括插件核心代码架构、MCP 通信管道实现、Pylance 环境注入逻辑以及相关工程配置）由 **Gemini 3.8 Flash**（模型标识：`gemini-3.8-flash`）辅助构思、重构与生成，并由人工开发者进行系统测试与工程化验证。
-
+ 
 This project (including core architecture, MCP communication pipeline, Pylance environment injection logic, and project tooling) was generated and engineered with the assistance of **Gemini 3.8 Flash** (technical ID: `gemini-3.8-flash`), and tested/verified for Rhino 8 environments.

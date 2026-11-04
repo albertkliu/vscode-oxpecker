@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "运行 Oxpecker 插件",
+      "name": "运行扩展 (Extension)",
       "type": "extensionHost",
       "request": "launch",
       "args": [
