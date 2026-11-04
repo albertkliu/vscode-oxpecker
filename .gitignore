@@ -1,0 +1,23 @@
+# 1. 编译产物与 VSIX 安装包（重点：干掉根目录及子目录下的所有 vsix）
+*.vsix
+out/
+release/
+dist/
+
+# 2. 依赖管理
+node_modules/
+
+# 3. 日志与构建缓存
+*.log
+*.tsbuildinfo
+
+# 4. 操作系统临时文件
+.DS_Store
+Thumbs.db
+
+# 5. VS Code 个人本地设置（保留 launch/tasks，忽略个人偏好）
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+# settings.json 如果包含敏感信息或只属于你个人电脑的路径，建议忽略；如果是团队统一规则则可以保留
+.vscode/settings.json

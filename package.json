@@ -1,0 +1,122 @@
+{
+  "name": "vscode-oxpecker",
+  "displayName": "Oxpecker: Rhino MCP Runner",
+  "description": "A symbiotic companion for Rhino 8/9 — Run scripts directly via MCP. Designed & generated with Gemini 3.8 Flash.",
+  "ai": {
+    "generatedBy": "Gemini 3.8 Flash",
+    "modelId": "gemini-3.8-flash"
+  },
+  "version": "1.0.8",
+  "publisher": "oxpecker",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/vscode-oxpecker.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "rhino",
+    "rhinoceros",
+    "rhinocode",
+    "mcp",
+    "model-context-protocol",
+    "grasshopper",
+    "python"
+  ],
+  "activationEvents": [
+    "onLanguage:python",
+    "onLanguage:csharp",
+    "onCommand:oxpecker.showMenu",
+    "onCommand:oxpecker.run"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "oxpecker.showMenu",
+        "title": "Oxpecker: 打开控制面板",
+        "icon": "$(rocket)"
+      },
+      {
+        "command": "oxpecker.run",
+        "title": "Oxpecker: 在 Rhino 中运行代码/选区 (MCP)",
+        "icon": "$(play)"
+      },
+      {
+        "command": "oxpecker.setPort",
+        "title": "Oxpecker: 设置 Rhino MCP 端口"
+      },
+      {
+        "command": "oxpecker.reconnect",
+        "title": "Oxpecker: 重新测试连接 Rhino MCP"
+      },
+      {
+        "command": "oxpecker.selectEnvironment",
+        "title": "Oxpecker: 选择 Rhino Python 环境"
+      },
+      {
+        "command": "oxpecker.installStubs",
+        "title": "Oxpecker: 安装 Rhino API 类型存根 (自动补全支持)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "oxpecker.run",
+        "key": "ctrl+r",
+        "mac": "cmd+r",
+        "when": "editorTextFocus && (editorLangId == python || editorLangId == csharp)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "oxpecker.run",
+          "group": "navigation",
+          "when": "editorLangId == python || editorLangId == csharp"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "oxpecker.run",
+          "group": "oxpecker@1",
+          "when": "editorLangId == python || editorLangId == csharp"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Oxpecker: Rhino MCP",
+      "properties": {
+        "oxpecker.mcpPort": {
+          "type": "number",
+          "default": 10501,
+          "description": "Rhino MCP Server 监听端口 (在 Rhino 端修改后在此同步修改)"
+        },
+        "oxpecker.selectedPythonEnv": {
+          "type": "string",
+          "default": "",
+          "description": "当前选中的 Rhino Python 虚拟环境路径"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "build": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --minify",
+    "vsix": "npm run build && npx @vscode/vsce package -o ./release/"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.24.0",
+    "esbuild": "^0.20.2",
+    "typescript": "^5.3.0"
+  }
+}
