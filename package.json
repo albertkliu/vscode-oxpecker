@@ -1,17 +1,13 @@
 {
   "name": "vscode-oxpecker",
-  "displayName": "Oxpecker: Rhino MCP Runner",
-  "description": "A symbiotic companion for Rhino 8/9 — Run scripts directly via MCP. Designed & generated with Gemini 3.8 Flash.",
-  "ai": {
-    "generatedBy": "Gemini 3.8 Flash",
-    "modelId": "gemini-3.8-flash"
-  },
-  "version": "1.0.8",
-  "publisher": "oxpecker",
+  "displayName": "Oxpecker - Rhino Script Runner for VS Code (Python & C#)",
+  "description": "Run Python and C# scripts inside Rhino 8/9 via MCP with Pylance IntelliSense & auto-completion support.",
+  "version": "1.0.9",
+  "publisher": "你的Publisher_ID",
   "icon": "media/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/vscode-oxpecker.git"
+    "url": "https://github.com/albertkliu/vscode-oxpecker.git"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -24,10 +20,12 @@
     "rhino",
     "rhinoceros",
     "rhinocode",
-    "mcp",
-    "model-context-protocol",
+    "rhinopython",
+    "rhino 8",
+    "csharp",
     "grasshopper",
-    "python"
+    "mcp",
+    "script runner"
   ],
   "activationEvents": [
     "onLanguage:python",
