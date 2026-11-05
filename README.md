@@ -24,7 +24,9 @@
 ## 🚀 使用步骤
 
 1. **Rhino 端**：
-   - Rhino8 需要首先安装 [Install Rhino-MCP-Platform in Rhino](rhino8://package/search?name=Rhino-MCP-Platform)
+   - 在命令行输入 `PackageManager` 并回车。
+   - 在搜索框中输入 `Rhino-MCP-Platform`。
+   - 找到插件后点击 **Install** 进行安装。
    - 启动 Rhino 8/9，运行命令启动 MCPStart 并设定监听端口（默认推荐 `10501`）。
 2. **VS Code 端**：
    - 点击左下角状态栏 `Oxpecker` 图标，在弹出的控制面板中：设置与 Rhino 一致的端口号；
