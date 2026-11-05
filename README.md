@@ -23,10 +23,12 @@
 
 ## 🚀 使用步骤
 
-1. **Rhino 端**：启动 Rhino 8+，运行命令启动 MCP Server 并记录监听端口（默认推荐 `10501`）。
-2. **VS Code 端**：点击左下角状态栏 `Oxpecker` 图标，在弹出的控制面板中：
-   - 设置与 Rhino 一致的端口号；
-   - 选择 Rhino 自带的 Python 环境（如 `py39-rh8`），插件会自动配置 Pylance 代码补全。
+1. **Rhino 端**：
+   - Rhino8 需要首先安装 [Install Rhino-MCP-Platform in Rhino](rhino8://package/search?name=Rhino-MCP-Platform)
+   - 启动 Rhino 8/9，运行命令启动 MCPStart 并设定监听端口（默认推荐 `10501`）。
+2. **VS Code 端**：
+   - 点击左下角状态栏 `Oxpecker` 图标，在弹出的控制面板中：设置与 Rhino 一致的端口号；
+   - 选择 Rhino 自带的 Python 环境（如 `%USERPROFILE%\.rhinocode\py39-rh8`），插件会自动配置 Pylance 代码补全。
 3. **运行代码**：
    - 打开 `.py` 或 `.cs` 脚本，点击编辑器右上角 **Oxpecker 运行图标**；
    - 或使用快捷键 `Ctrl + R` (macOS: `Cmd + R`) 运行全文或选区代码。
