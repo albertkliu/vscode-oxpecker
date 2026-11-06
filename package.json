@@ -29,9 +29,7 @@
   ],
   "activationEvents": [
     "onLanguage:python",
-    "onLanguage:csharp",
-    "onCommand:oxpecker.showMenu",
-    "onCommand:oxpecker.run"
+    "onLanguage:csharp"
   ],
   "main": "./out/extension.js",
   "contributes": {
